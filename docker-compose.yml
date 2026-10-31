@@ -1,0 +1,30 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: ba
+      POSTGRES_PASSWORD: ba_dev_password
+      POSTGRES_DB: ba
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - ba_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ba -d ba"]
+      interval: 3s
+      retries: 20
+
+  # Optional web UI for the database (presentations). Start with:
+  #   docker compose --profile tools up -d adminer      -> http://127.0.0.1:8080
+  adminer:
+    image: adminer:4
+    profiles: ["tools"]
+    depends_on: [db]
+    environment:
+      ADMINER_DEFAULT_SERVER: db
+      ADMINER_DESIGN: pepa-linha-dark
+    ports:
+      - "127.0.0.1:8080:8080"
+
+volumes:
+  ba_pgdata:

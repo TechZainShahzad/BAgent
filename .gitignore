@@ -1,0 +1,26 @@
+.env
+.venv/
+__pycache__/
+node_modules/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+backups/
+*.rehearsal*.log
+.rehearsal_*
+.teams_*
+*.teams.log
+*.dev.log
+cable_test.log
+
+# Local run artefacts (never publish)
+*.log
+.demo_*
+.ui_mid
+.test_run.out
+.env.*
+!.env.example
+frontend/dist/
+*.tsbuildinfo
+.venv*/

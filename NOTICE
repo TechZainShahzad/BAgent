@@ -1,0 +1,8 @@
+Agentic BA SDLC Platform
+Copyright 2026 Muhammad Zain Shahzad and contributors
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This product depends on third-party open-source software that is installed
+separately by the package managers (uv / npm) and remains under its own
+license. No third-party source code is vendored in this repository.

@@ -1,0 +1,23 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-lint
+        name: ruff lint
+        entry: bash -c 'cd backend && python -m uv run ruff check .'
+        language: system
+        pass_filenames: false
+      - id: ruff-format
+        name: ruff format check
+        entry: bash -c 'cd backend && python -m uv run ruff format --check .'
+        language: system
+        pass_filenames: false
+      - id: mypy
+        name: mypy
+        entry: bash -c 'cd backend && python -m uv run mypy app'
+        language: system
+        pass_filenames: false
+      - id: no-secrets
+        name: block Atlassian tokens and private keys
+        entry: bash -c '! git diff --cached -U0 | grep -E "ATATT3x[A-Za-z0-9_=-]{20,}|BEGIN (RSA|OPENSSH|PRIVATE) KEY"'
+        language: system
+        pass_filenames: false

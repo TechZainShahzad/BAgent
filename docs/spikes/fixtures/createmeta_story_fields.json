@@ -1,0 +1,401 @@
+{
+ "startAt": 0,
+ "maxResults": 50,
+ "total": 21,
+ "fields": [
+  {
+   "required": false,
+   "schema": {
+    "type": "user",
+    "system": "assignee"
+   },
+   "name": "Assignee",
+   "key": "assignee",
+   "autoCompleteUrl": "https://example.atlassian.net/rest/api/3/user/assignable/search?project=SCRUM&query=",
+   "hasDefaultValue": false,
+   "operations": [
+    "set"
+   ],
+   "fieldId": "assignee"
+  },
+  {
+   "required": false,
+   "schema": {
+    "type": "array",
+    "items": "attachment",
+    "system": "attachment"
+   },
+   "name": "Attachment",
+   "key": "attachment",
+   "hasDefaultValue": false,
+   "operations": [
+    "set",
+    "copy"
+   ],
+   "fieldId": "attachment"
+  },
+  {
+   "required": false,
+   "schema": {
+    "type": "any",
+    "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:devsummarycf",
+    "customId": 10000
+   },
+   "name": "Development",
+   "key": "customfield_10000",
+   "hasDefaultValue": false,
+   "operations": [
+    "set"
+   ],
+   "fieldId": "customfield_10000"
+  },
+  {
+   "required": false,
+   "schema": {
+    "type": "team",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:atlassian-team",
+    "customId": 10001,
+    "configuration": {
+     "com.atlassian.jira.plugin.system.customfieldtypes:atlassian-team": true
+    }
+   },
+   "name": "Team",
+   "key": "customfield_10001",
+   "autoCompleteUrl": "https://example.atlassian.net/gateway/api/v1/recommendations",
+   "hasDefaultValue": false,
+   "operations": [
+    "set"
+   ],
+   "fieldId": "customfield_10001"
+  },
+  {
+   "required": false,
+   "schema": {
+    "type": "date",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datepicker",
+    "customId": 10015
+   },
+   "name": "Start date",
+   "key": "customfield_10015",
+   "hasDefaultValue": false,
+   "operations": [
+    "set"
+   ],
+   "fieldId": "customfield_10015"
+  },
+  {
+   "required": false,
+   "schema": {
+    "type": "number",
+    "custom": "com.pyxis.greenhopper.jira:jsw-story-points",
+    "customId": 10016
+   },
+   "name": "Story point estimate",
+   "key": "customfield_10016",
+   "hasDefaultValue": false,
+   "operations": [
+    "set"
+   ],
+   "fieldId": "customfield_10016"
+  },
+  {
+   "required": false,
+   "schema": {
+    "type": "any",
+    "custom": "com.pyxis.greenhopper.jira:gh-lexo-rank",
+    "customId": 10019
+   },
+   "name": "Rank",
+   "key": "customfield_10019",
+   "hasDefaultValue": false,
+   "operations": [
+    "set"
+   ],
+   "fieldId": "customfield_10019"
+  },
+  {
+   "required": false,
+   "schema": {
+    "type": "array",
+    "items": "json",
+    "custom": "com.pyxis.greenhopper.jira:gh-sprint",
+    "customId": 10020
+   },
+   "name": "Sprint",
+   "key": "customfield_10020",
+   "hasDefaultValue": false,
+   "operations": [
+    "set"
+   ],
+   "fieldId": "customfield_10020"
+  },
+  {
+   "required": false,
+   "schema": {
+    "type": "array",
+    "items": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes",
+    "customId": 10021
+   },
+   "name": "Flagged",
+   "key": "customfield_10021",
+   "hasDefaultValue": false,
+   "operations": [
+    "add",
+    "set",
+    "remove"
+   ],
+   "allowedValues": [
+    {
+     "self": "https://example.atlassian.net/rest/api/3/customFieldOption/10019",
+     "value": "Impediment",
+     "id": "10019"
+    }
+   ],
+   "fieldId": "customfield_10021"
+  },
+  {
+   "required": false,
+   "schema": {
+    "type": "any",
+    "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:vulnerabilitycf",
+    "customId": 10037
+   },
+   "name": "Vulnerability",
+   "key": "customfield_10037",
+   "hasDefaultValue": false,
+   "operations": [
+    "set"
+   ],
+   "fieldId": "customfield_10037"
+  },
+  {
+   "required": false,
+   "schema": {
+    "type": "string",
+    "system": "description"
+   },
+   "name": "Description",
+   "key": "description",
+   "hasDefaultValue": false,
+   "operations": [
+    "set"
+   ],
+   "fieldId": "description"
+  },
+  {
+   "required": false,
+   "schema": {
+    "type": "date",
+    "system": "duedate"
+   },
+   "name": "Due date",
+   "key": "duedate",
+   "hasDefaultValue": false,
+   "operations": [
+    "set"
+   ],
+   "fieldId": "duedate"
+  },
+  {
+   "required": false,
+   "schema": {
+    "type": "array",
+    "items": "issuelinks",
+    "system": "issuelinks"
+   },
+   "name": "Linked Issues",
+   "key": "issuelinks",
+   "autoCompleteUrl": "https://example.atlassian.net/rest/api/3/issue/picker?currentProjectId=&showSubTaskParent=true&showSubTasks=true&currentIssueKey=null&query=",
+   "hasDefaultValue": false,
+   "operations": [
+    "add",
+    "copy"
+   ],
+   "fieldId": "issuelinks"
+  },
+  {
+   "required": false,
+   "schema": {
+    "type": "issuerestriction",
+    "system": "issuerestriction"
+   },
+   "name": "Restrict to",
+   "key": "issuerestriction",
+   "hasDefaultValue": false,
+   "operations": [
+    "set"
+   ],
+   "allowedValues": [],
+   "fieldId": "issuerestriction"
+  },
+  {
+   "required": true,
+   "schema": {
+    "type": "issuetype",
+    "system": "issuetype"
+   },
+   "name": "Issue Type",
+   "key": "issuetype",
+   "hasDefaultValue": false,
+   "operations": [],
+   "allowedValues": [
+    {
+     "self": "https://example.atlassian.net/rest/api/3/issuetype/10004",
+     "id": "10004",
+     "description": "Stories track functionality or features expressed as user goals.",
+     "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+     "name": "Story",
+     "subtask": false,
+     "avatarId": 10315,
+     "entityId": "cbfbde3e-8095-4db7-a3e4-9a352927d39b",
+     "hierarchyLevel": 0
+    }
+   ],
+   "fieldId": "issuetype"
+  },
+  {
+   "required": false,
+   "schema": {
+    "type": "array",
+    "items": "string",
+    "system": "labels"
+   },
+   "name": "Labels",
+   "key": "labels",
+   "autoCompleteUrl": "https://example.atlassian.net/rest/api/1.0/labels/suggest?query=",
+   "hasDefaultValue": false,
+   "operations": [
+    "add",
+    "set",
+    "remove"
+   ],
+   "fieldId": "labels"
+  },
+  {
+   "required": false,
+   "schema": {
+    "type": "issuelink",
+    "system": "parent"
+   },
+   "name": "Parent",
+   "key": "parent",
+   "hasDefaultValue": false,
+   "operations": [
+    "set"
+   ],
+   "fieldId": "parent"
+  },
+  {
+   "required": false,
+   "schema": {
+    "type": "priority",
+    "system": "priority"
+   },
+   "name": "Priority",
+   "key": "priority",
+   "hasDefaultValue": true,
+   "operations": [
+    "set"
+   ],
+   "allowedValues": [
+    {
+     "self": "https://example.atlassian.net/rest/api/3/priority/1",
+     "iconUrl": "https://example.atlassian.net/images/icons/priorities/highest_new.svg",
+     "name": "Highest",
+     "id": "1"
+    },
+    {
+     "self": "https://example.atlassian.net/rest/api/3/priority/2",
+     "iconUrl": "https://example.atlassian.net/images/icons/priorities/high_new.svg",
+     "name": "High",
+     "id": "2"
+    },
+    {
+     "self": "https://example.atlassian.net/rest/api/3/priority/3",
+     "iconUrl": "https://example.atlassian.net/images/icons/priorities/medium_new.svg",
+     "name": "Medium",
+     "id": "3"
+    },
+    {
+     "self": "https://example.atlassian.net/rest/api/3/priority/4",
+     "iconUrl": "https://example.atlassian.net/images/icons/priorities/low_new.svg",
+     "name": "Low",
+     "id": "4"
+    },
+    {
+     "self": "https://example.atlassian.net/rest/api/3/priority/5",
+     "iconUrl": "https://example.atlassian.net/images/icons/priorities/lowest_new.svg",
+     "name": "Lowest",
+     "id": "5"
+    }
+   ],
+   "defaultValue": {
+    "self": "https://example.atlassian.net/rest/api/3/priority/3",
+    "iconUrl": "https://example.atlassian.net/images/icons/priorities/medium_new.svg",
+    "name": "Medium",
+    "id": "3"
+   },
+   "fieldId": "priority"
+  },
+  {
+   "required": true,
+   "schema": {
+    "type": "project",
+    "system": "project"
+   },
+   "name": "Project",
+   "key": "project",
+   "hasDefaultValue": false,
+   "operations": [
+    "set"
+   ],
+   "allowedValues": [
+    {
+     "self": "https://example.atlassian.net/rest/api/3/project/10000",
+     "id": "10000",
+     "key": "SCRUM",
+     "name": "QA Testing",
+     "projectTypeKey": "software",
+     "simplified": true,
+     "avatarUrls": {
+      "48x48": "https://example.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10401",
+      "24x24": "https://example.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10401?size=small",
+      "16x16": "https://example.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10401?size=xsmall",
+      "32x32": "https://example.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10401?size=medium"
+     }
+    }
+   ],
+   "fieldId": "project"
+  },
+  {
+   "required": true,
+   "schema": {
+    "type": "user",
+    "system": "reporter"
+   },
+   "name": "Reporter",
+   "key": "reporter",
+   "autoCompleteUrl": "https://example.atlassian.net/rest/api/3/user/recommend?context=Reporter&issueKey=",
+   "hasDefaultValue": true,
+   "operations": [
+    "set"
+   ],
+   "fieldId": "reporter"
+  },
+  {
+   "required": true,
+   "schema": {
+    "type": "string",
+    "system": "summary"
+   },
+   "name": "Summary",
+   "key": "summary",
+   "hasDefaultValue": false,
+   "operations": [
+    "set"
+   ],
+   "fieldId": "summary"
+  }
+ ]
+}

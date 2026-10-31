@@ -1,0 +1,73 @@
+{
+ "expand": "description,lead,issueTypes,url,projectKeys,permissions,insight",
+ "self": "https://example.atlassian.net/rest/api/3/project/10000",
+ "id": "10000",
+ "key": "SCRUM",
+ "description": "",
+ "lead": {
+  "self": "https://example.atlassian.net/rest/api/3/user?accountId=000000:fixture-account",
+  "accountId": "000000:fixture-account",
+  "displayName": "Fixture User",
+  "active": true
+ },
+ "components": [],
+ "issueTypes": [
+  {
+   "self": "https://example.atlassian.net/rest/api/3/issuetype/10001",
+   "id": "10001",
+   "description": "Epics track collections of related bugs, stories, and tasks.",
+   "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10307?size=medium",
+   "name": "Epic",
+   "subtask": false,
+   "avatarId": 10307,
+   "hierarchyLevel": 1
+  },
+  {
+   "self": "https://example.atlassian.net/rest/api/3/issuetype/10002",
+   "id": "10002",
+   "description": "Subtasks track small pieces of work that are part of a larger task.",
+   "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10316?size=medium",
+   "name": "Subtask",
+   "subtask": true,
+   "avatarId": 10316,
+   "hierarchyLevel": -1
+  },
+  {
+   "self": "https://example.atlassian.net/rest/api/3/issuetype/10003",
+   "id": "10003",
+   "description": "Tasks track small, distinct pieces of work.",
+   "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+   "name": "Task",
+   "subtask": false,
+   "avatarId": 10318,
+   "hierarchyLevel": 0
+  },
+  {
+   "self": "https://example.atlassian.net/rest/api/3/issuetype/10004",
+   "id": "10004",
+   "description": "Stories track functionality or features expressed as user goals.",
+   "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+   "name": "Story",
+   "subtask": false,
+   "avatarId": 10315,
+   "hierarchyLevel": 0
+  }
+ ],
+ "assigneeType": "UNASSIGNED",
+ "versions": [],
+ "name": "QA Testing",
+ "roles": {
+  "atlassian-addons-project-access": "https://example.atlassian.net/rest/api/3/project/10000/role/10009",
+  "Administrator": "https://example.atlassian.net/rest/api/3/project/10000/role/10005",
+  "jira-guest-member": "https://example.atlassian.net/rest/api/3/project/10000/role/10008",
+  "Viewer": "https://example.atlassian.net/rest/api/3/project/10000/role/10007",
+  "Member": "https://example.atlassian.net/rest/api/3/project/10000/role/10006"
+ },
+ "projectTypeKey": "software",
+ "simplified": true,
+ "style": "next-gen",
+ "isPrivate": false,
+ "properties": {},
+ "entityId": "ebe04824-43b2-422a-89fb-46d3ed961fb3",
+ "uuid": "ebe04824-43b2-422a-89fb-46d3ed961fb3"
+}

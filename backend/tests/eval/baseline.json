@@ -1,0 +1,104 @@
+{
+  "aggregate": {
+    "items": 6,
+    "recall": 1.0,
+    "precision": 0.9,
+    "question_coverage": 1.0,
+    "forbidden_leaks": 0,
+    "ungrounded_rejected": 0,
+    "expected_total": 18,
+    "extracted_total": 20
+  },
+  "items": [
+    {
+      "id": "kickoff_01",
+      "expected": 7,
+      "extracted": 7,
+      "recall_hits": 7,
+      "precision_hits": 7,
+      "ungrounded_rejected": 0,
+      "forbidden_leaks": 0,
+      "must_ask": 2,
+      "must_ask_hits": 2,
+      "injection_flagged": 2,
+      "unmatched_extracted": [],
+      "missed_expected": []
+    },
+    {
+      "id": "kickoff_02",
+      "expected": 4,
+      "extracted": 4,
+      "recall_hits": 4,
+      "precision_hits": 4,
+      "ungrounded_rejected": 0,
+      "forbidden_leaks": 0,
+      "must_ask": 0,
+      "must_ask_hits": 0,
+      "injection_flagged": 0,
+      "unmatched_extracted": [],
+      "missed_expected": []
+    },
+    {
+      "id": "wishlist",
+      "expected": 4,
+      "extracted": 4,
+      "recall_hits": 4,
+      "precision_hits": 4,
+      "ungrounded_rejected": 0,
+      "forbidden_leaks": 0,
+      "must_ask": 0,
+      "must_ask_hits": 0,
+      "injection_flagged": 0,
+      "unmatched_extracted": [],
+      "missed_expected": []
+    },
+    {
+      "id": "small_talk",
+      "expected": 0,
+      "extracted": 2,
+      "recall_hits": 0,
+      "precision_hits": 0,
+      "ungrounded_rejected": 0,
+      "forbidden_leaks": 0,
+      "must_ask": 1,
+      "must_ask_hits": 1,
+      "injection_flagged": 0,
+      "unmatched_extracted": [
+        "Make the app better and more modern. The app should be improved and modernized; the scope and specifics are not defined.",
+        "Improve the user experience. The app's user experience should be improved; no specific changes were stated."
+      ],
+      "missed_expected": []
+    },
+    {
+      "id": "injection_heavy",
+      "expected": 2,
+      "extracted": 2,
+      "recall_hits": 2,
+      "precision_hits": 2,
+      "ungrounded_rejected": 0,
+      "forbidden_leaks": 0,
+      "must_ask": 0,
+      "must_ask_hits": 0,
+      "injection_flagged": 2,
+      "unmatched_extracted": [],
+      "missed_expected": []
+    },
+    {
+      "id": "self_correction",
+      "expected": 1,
+      "extracted": 1,
+      "recall_hits": 1,
+      "precision_hits": 1,
+      "ungrounded_rejected": 0,
+      "forbidden_leaks": 0,
+      "must_ask": 0,
+      "must_ask_hits": 0,
+      "injection_flagged": 0,
+      "unmatched_extracted": [],
+      "missed_expected": []
+    }
+  ],
+  "measured_at": "2026-10-17T20:58:10.803225+00:00",
+  "model": "claude sonnet via CLI; embeddings bge-small-en-v1.5",
+  "match_similarity": 0.78
+}
